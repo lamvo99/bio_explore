@@ -1,0 +1,62 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        options:
+          generic_argument_factories: true
+          explicit_to_json: true
+      slang_build_runner:
+        options:
+          base_locale: vi
+          fallback_strategy: base_locale
+          input_directory: assets/i18n
+          input_file_pattern: .json
+          output_directory: lib/generated
+          # output_file_name: translations.g.dart
+          output_format: multiple_files
+          locale_handling: true
+          flutter_integration: true
+          namespaces: false
+          translate_var: i18n
+          enum_name: AppLocale
+          translation_class_visibility: public
+          key_case: pascal
+          key_map_case: null
+          param_case: camel
+          string_interpolation: braces
+          flat_map: true
+          translation_overrides: false
+          timestamp: true
+          maps:
+            # - Error
+            # - category
+            # - iconNames
+          pluralization:
+            auto: cardinal
+            default_parameter: n
+            cardinal:
+              - someKey.apple
+            ordinal:
+              - someKey.place
+          contexts:
+            gender_context:
+              enum:
+                - male
+                - female
+              paths:
+                - my.path.to.greet
+              default_parameter: gender
+              generate_enum: true
+          interfaces:
+            PageData: onboarding.pages.*
+            PageData2:
+              paths:
+                - my.path
+                - cool.pages.*
+              attributes:
+                - String title
+                - String? content
+          obfuscation:
+            enabled: false
+            secret: somekey
+          imports:
