@@ -61,6 +61,7 @@ class AppDio with DioMixin implements Dio {
       <({RequestOptions options, ErrorInterceptorHandler handler})>[];
 
   AppDio() {
+    print("#########################555");
     options = BaseOptions(
       connectTimeout: const Duration(seconds: 20),
       sendTimeout: const Duration(seconds: 20),
@@ -69,6 +70,7 @@ class AppDio with DioMixin implements Dio {
         "Content-Type": "application/json",
       },
     );
+    print("#########################555999");
     if (kDebugMode) {
       interceptors.add(
         TalkerDioLogger(

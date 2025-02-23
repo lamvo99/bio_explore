@@ -34,6 +34,12 @@ class _MyAppState extends State<MyApp> {
   final botToastBuilder = BotToastInit();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 763),

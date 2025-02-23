@@ -16,12 +16,11 @@ void main() async {
 
   runZonedGuarded(() async {
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-
     // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
     Talker talker = TalkerFlutter.init();
     GetIt.instance.registerSingleton<Talker>(talker);
 
-    // await sp.init();
+    await sp.init();
     await dotenv.load(fileName: ".env");
     apis = ApiClient(AppDio(), baseUrl: dotenv.env['BASE_URL']!);
 

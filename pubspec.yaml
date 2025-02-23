@@ -141,6 +141,7 @@ flutter:
     - assets/i18n/
     - assets/fonts/
     - assets/icons/
+    - .env
 
   fonts:
     - family: InterDisplay
